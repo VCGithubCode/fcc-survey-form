@@ -4,17 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <header>Header</header>
-  <main>
-    <h1 class="game-title">Hello <span id="interactive-word">World</span>!</h1>
-    <h2>Welcome to your deployed site!</h2>
-  </main>
-  <footer>Footer</footer>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
+  <title>Recruiter Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Recruiter Survey Form</h1>
+      <p id="description">Objective: To Find out what Tech Recruiters are seeking.</p>
+      <form id="survey-form">
+        <label for="name" id="name-label">Company: <input type="text" id="name" placeholder="Enter Your Company Name:" required></label>
+        <label for="email" id="email-label">Email: <input type="email" id="email" placeholder="Enter Your Contact Email Address:" required></label>
+        <label for="number" id="number-label">Positions to Fill: <input type="number" id="number" min="1" max="120" placeholder="Number of Tech Positions:"></label>
+        <select class="timeframe" id="dropdown" title="Timeframe">
+          <option>Please select one</option>
+          <option>Immediately</option>
+          <option>Within the next 6 months</option>
+          <br>
+        </select>
+          <br>
+          <br>
+          <fieldset>    <legend>Employment type</legend>
+          <label for="full-time" class="radio">Full-Time</label><input type="radio" id="full-time" name="time-frame" value="time">
+          <label for="part-time" class="radio">Part-Time</label>
+          <input type="radio" id="part-time" name="time-frame" value="time">
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Preferred Tech Stack</legend>
+            <label for="frontEnd" class="checkbox">Front End</label><input type="checkbox" id="frontEnd" name="frontEnd" value="front-end">
+            <label for="backEnd" class="checkbox">Back End</label>
+            <input type="checkbox" id="backEnd" name="backEnd" value="back-end">
+            <label for="fullStack" class="checkbox">Full-Stack</label>
+            <input type="checkbox" id="fullStack" name="fullStack" value="full-Stack">
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Preferred Experience</legend>
+            <label for="juniorRole" class="checkbox">Junior Role</label>
+            <input type="checkbox" id="juniorRole" name="junior-Role" value="role">
+            <label for="seniorRole" class="checkbox">Senior Role</label>
+            <input type="checkbox" id="seniorRole" name="senior-Role" value="senior-Role">
+          </fieldset>
+          <textarea class="textarea" rows="5" cols="3" placeholder="Tell us more about the candidate or candidates you're looking for..."></textarea>
+          <input type="submit" id="submit">
+      </form>
+    </div>
+  </body>
 </html>
